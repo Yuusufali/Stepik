@@ -3,47 +3,47 @@
         xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-4.9.xsd">
-    <changeSet id="24_09_2024_create_roles_tables" author="tursinaliev_yusufali">
+    <changeSet id="27_09_2024_create_roles_tables" author="yusufali_tursinaliev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter=";"
-                 path="db/changelog/changes/24_09_2024_create_roles_table.sql"
+                 path="db/changelog/changes/27_09_2024_create_roles_table.sql"
                  relativeToChangelogFile="false"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
-    <changeSet id="24_09_2024_create_statues_table" author="tursinaliev_yusufali">
+    <changeSet id="27_09_2024_create_statues_table" author="yusufali_tursinaliev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter=";"
-                 path="db/changelog/changes/24_09_2024_create_statues_table.sql"
+                 path="db/changelog/changes/27_09_2024_create_statues_table.sql"
                  relativeToChangelogFile="false"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
-    <changeSet id="24_09_2024_create_users_table" author="tursinaliev_yusufali">
+    <changeSet id="27_09_2024_create_users_table" author="yusufali_tursinaliev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter=";"
-                 path="db/changelog/changes/24_09_2024_create_users_table.sql"
+                 path="db/changelog/changes/27_09_2024_create_users_table.sql"
                  relativeToChangelogFile="false"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
-    <changeSet id="24_09_2024_create_users_roles_tables" author="tursinaliev_yusufali">
+    <changeSet id="14_05_2024_create_users_roles_tables" author="yusufali_tursinaliev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter=";"
-                 path="db/changelog/changes/24_09_2024_create_users_roles_table.sql"
+                 path="db/changelog/changes/27_09_2024_create_users_roles_table.sql"
                  relativeToChangelogFile="false"
                  splitStatements="true"
                  stripComments="true"/>
     </changeSet>
-    <changeSet id="24_09_2024_create_tasks_tables" author="tursinaliev_yusufali">
+    <changeSet id="14_05_2024_create_tasks_tables" author="yusufali_tursinaliev">
         <sqlFile dbms="postgresql"
                  encoding="utf8"
                  endDelimiter=";"
-                 path="db/changelog/changes/24_09_2024_create_tasks_table.sql"
+                 path="db/changelog/changes/27_09_2024_create_tasks_table.sql"
                  relativeToChangelogFile="false"
                  splitStatements="true"
                  stripComments="true"/>
