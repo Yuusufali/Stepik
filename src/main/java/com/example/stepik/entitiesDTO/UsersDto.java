@@ -1,8 +1,6 @@
 package com.example.stepik.entitiesDTO;
 
-
-import jakarta.persistence.FetchType;
-import jakarta.persistence.OneToMany;
+import com.example.stepik.entities.Permission;
 import lombok.*;
 
 import java.util.List;
@@ -15,5 +13,5 @@ public class UsersDto {
     private Long id;
     private String fullName;
     private String email;
-
+    private List<Permission> roles;
 }
