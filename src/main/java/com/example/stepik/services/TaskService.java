@@ -6,7 +6,7 @@ import com.example.stepik.entitiesDTO.TaskDto;
 import java.util.List;
 
 public interface TaskService {
-    List<TaskDto> getTaskByUser(Long id);
+    List<TaskDto> getTask();
 
     TaskDto getTaskById(Long taskId);
 

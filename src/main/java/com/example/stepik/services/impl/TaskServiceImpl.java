@@ -14,6 +14,7 @@ import com.example.stepik.repositories.StatusRepository;
 import com.example.stepik.repositories.TaskRepository;
 import com.example.stepik.repositories.UsersRepository;
 import com.example.stepik.services.TaskService;
+import com.example.stepik.utils.UserUtils;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -30,21 +31,13 @@ public class TaskServiceImpl implements TaskService {
 
     private final TaskRepository taskRepository;
     private final TaskMapper taskMapper;
-    private final UsersRepository usersRepository;
 
 
 
     @Override
-    public List<TaskDto> getTaskByUser(Long userId) {
-        Users user = usersRepository.findAllById(userId);
-        if(user!=null){
-            Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-            String currentEmail = authentication.getName();
-            if(!user.getEmail().equals(currentEmail)){
-                return null;
-            }
-        }
-        return taskMapper.mapToTaskDtoList(taskRepository.findAllByUser_Id(userId));
+    public List<TaskDto> getTask() {
+        Users currentUser = UserUtils.getCurrentUser();
+        return taskMapper.mapToTaskDtoList(taskRepository.findAllByUser_Id(currentUser.getId()));
     }
 
     @Override

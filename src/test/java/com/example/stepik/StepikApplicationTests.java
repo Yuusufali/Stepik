@@ -33,11 +33,11 @@ class StepikApplicationTests {
 	void contextLoads() {
 	}
 
-	@Test
-	void getTaskByUser(){
-		List<TaskDto> tasks = taskService.getTaskByUser(1L);
-		Assertions.assertNotNull(tasks);
-	}
+//	@Test
+//	void getTaskByUser(){
+//		List<TaskDto> tasks = taskService.getTask();
+//		Assertions.assertNotNull(tasks);
+//	}
 
 	@Test
 	void getTask(){
