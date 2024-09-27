@@ -15,9 +15,9 @@ import java.util.List;
 public class TaskController {
     private final TaskService taskService;
 
-    @GetMapping("/{userId}")
-    public List<TaskDto> getTasksByUser(@PathVariable Long userId){
-        return taskService.getTaskByUser(userId);
+    @GetMapping()
+    public List<TaskDto> getTasks(){
+        return taskService.getTask();
     }
 
     @PreAuthorize("hasAnyRole('ROLE_ADMIN')")

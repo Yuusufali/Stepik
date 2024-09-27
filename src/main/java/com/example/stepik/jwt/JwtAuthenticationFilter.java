@@ -1,6 +1,7 @@
 package com.example.stepik.jwt;
 
 
+import com.example.stepik.entities.Users;
 import com.example.stepik.services.MyUserService;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
@@ -38,12 +39,12 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         jwt = authHeader.substring(7);
         userEmail = jwtService.extractUsername(jwt);
         if(userEmail != null && SecurityContextHolder.getContext().getAuthentication()==null){
-            UserDetails userDetails = this.userService.loadUserByUsername(userEmail);
-            if(jwtService.isTokenValid(jwt,userDetails)){
+            Users userEntity = this.userService.loadUserByUsername(userEmail);
+            if(jwtService.isTokenValid(jwt,userEntity)){
                 UsernamePasswordAuthenticationToken authToken = new UsernamePasswordAuthenticationToken(
-                        userDetails,
+                        userEntity,
                         null,
-                        userDetails.getAuthorities()
+                        userEntity.getAuthorities()
                 );
                 authToken.setDetails(
                         new WebAuthenticationDetailsSource().buildDetails(request)
